@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PingMeBack — Fast, private messaging built for the dark</title>
+<meta name="description" content="PingMeBack is a fast, minimal chat app for Android. Voice messages, media sharing, read receipts and a neon-on-black interface built to be easy on your eyes. Join the early access programme.">
+<meta name="theme-color" content="#04070a">
+<link rel="icon" href="assets/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/logo.png">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="PingMeBack — Fast, private messaging built for the dark">
+<meta property="og:description" content="Voice messages, media sharing, read receipts and a neon-on-black interface. Request early access on Google Play.">
+<meta property="og:image" content="assets/logo.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============================ NAV ============================ -->
+<header class="nav">
+  <div class="wrap nav__in">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.png" alt="PingMeBack logo">
+      <span>PingMeBack</span>
+    </a>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="#features">Features</a>
+      <a href="#screens">Screens</a>
+      <a href="#access">Early access</a>
+      <a href="#faq">FAQ</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+
+    <div class="nav__cta">
+      <a class="btn btn--primary btn--sm" href="https://docs.google.com/forms/d/e/1FAIpQLSddCtJkI2fU3N0K5g80t00EVzGH8-jRmo-6OUdHBBDJa1eNFg/viewform?usp=sharing&amp;ouid=109148587220267106349" target="_blank" rel="noopener">Get early access</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================ HERO ============================ -->
+<section class="hero">
+  <div class="wrap hero__in">
+    <div>
+      <span class="eyebrow"><i class="dot"></i> Early access · Android</span>
+      <h1 class="h-xl">Say it once.<br><span class="grad">Ping me back.</span></h1>
+      <p class="lead">A fast, focused messenger with voice notes, media sharing and delivery you can actually trust — wrapped in a neon-on-black interface that stays easy on your eyes at 2 a.m.</p>
+
+      <div class="btn-row">
+        <a class="play-badge" href="https://docs.google.com/forms/d/e/1FAIpQLSddCtJkI2fU3N0K5g80t00EVzGH8-jRmo-6OUdHBBDJa1eNFg/viewform?usp=sharing&amp;ouid=109148587220267106349" target="_blank" rel="noopener" aria-label="Request early access on Google Play">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3.6 1.8C3.2 2.1 3 2.6 3 3.2v17.6c0 .6.2 1.1.6 1.4L13.4 12 3.6 1.8z" fill="#00C3FF"/>
+            <path d="M17.3 8.6 4.9 1.5c-.5-.3-1-.3-1.3-.1L13.4 12l3.9-3.4z" fill="#00E177"/>
+            <path d="M3.6 22.6c.3.2.8.2 1.3-.1l12.4-7.1L13.4 12 3.6 22.6z" fill="#FF3A44"/>
+            <path d="m17.3 8.6-3.9 3.4 3.9 3.4 3.1-1.8c1-.6 1-1.9 0-2.5l-3.1-1.5z" fill="#FFC900"/>
+          </svg>
+          <span class="pb-txt">
+            <span class="pb-top">Request access on</span>
+            <span class="pb-main">Google Play</span>
+          </span>
+        </a>
+        <a class="btn btn--ghost" href="#features">See what's inside</a>
+      </div>
+
+      <p class="hero__note">Free while in testing · Android 8.0 and above · No ads, ever</p>
+
+      <div class="trust">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3z"/></svg> Privacy controls built in</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h8l-1 8 10-12h-8l1-8z"/></svg> Instant push delivery</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Works when you're offline</div>
+      </div>
+    </div>
+
+    <div class="cluster">
+      <div class="shot shot--left"><img src="assets/splash-screen.png" alt="PingMeBack splash screen" loading="eager" width="1280" height="2856"></div>
+      <div class="shot shot--main"><img src="assets/chatlist-screen.png" alt="PingMeBack chat list with unread and pinned filters" loading="eager" width="1280" height="2856"></div>
+      <div class="shot shot--right"><img src="assets/chat-message.png" alt="A PingMeBack conversation with text and voice messages" loading="eager" width="1280" height="2856"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ STRIP ============================ -->
+<div class="strip" aria-hidden="true">
+  <div class="strip__track">
+    <span>Voice messages</span><span>Read receipts</span><span>Pinned chats</span><span>Media up to 25 MB</span><span>Saved messages</span><span>Blocked list</span><span>Multi-device sessions</span><span>Last seen control</span>
+    <span>Voice messages</span><span>Read receipts</span><span>Pinned chats</span><span>Media up to 25 MB</span><span>Saved messages</span><span>Blocked list</span><span>Multi-device sessions</span><span>Last seen control</span>
+  </div>
+</div>
+
+<!-- ============================ FEATURES ============================ -->
+<section class="section" id="features">
+  <div class="wrap">
+    <div class="center reveal" style="max-width:720px;margin-inline:auto;margin-bottom:52px">
+      <span class="eyebrow">What's inside</span>
+      <h2 class="h-lg">Everything you expect.<br>Nothing you don't.</h2>
+      <p class="lead center">No stories, no feeds, no algorithm deciding who hears from you. PingMeBack does one thing — conversation — and gets out of the way.</p>
+    </div>
+
+    <div class="grid grid--3">
+      <article class="card reveal">
+        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.9 8.9 0 0 1-4-.9L3 21l1.9-5a8.4 8.4 0 0 1 3.6-11.5 8.6 8.6 0 0 1 11.4 3.6 8.3 8.3 0 0 1 1.1 3.4z"/></svg></div>
+        <h3>Real-time 1:1 chat</h3>
+        <p>Messages land the moment you hit send, with single and double ticks so you always know where things stand.</p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3z"/><path d="M19 10.5a7 7 0 0 1-14 0M12 17.5V22"/></svg></div>
+        <h3>Voice messages</h3>
+        <p>Hold, talk, release. A live waveform and duration make voice notes as scannable as text.</p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21.4 11.1 12.3 20a5.5 5.5 0 0 1-7.8-7.8l9.2-9.1a3.7 3.7 0 1 1 5.2 5.2l-9.2 9.1a1.8 1.8 0 0 1-2.6-2.6l8.5-8.4"/></svg></div>
+        <h3>Photos, camera &amp; files</h3>
+        <p>Send from your gallery, shoot on the spot, or attach any document up to 25 MB without leaving the chat.</p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <h3>Privacy you control</h3>
+        <p>Decide who can see your name, photo and last seen. Block anyone, any time, and review every signed-in device.</p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9z"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></div>
+        <h3>Notifications that work</h3>
+        <p>Push arrives cold-start or backgrounded, and tapping it opens exactly the conversation you were pinged from.</p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="19" cy="13" r="2"/><circle cx="6" cy="12" r="2.5"/><circle cx="10" cy="19" r="2"/><path d="M12 2a10 10 0 1 0 0 20c1.1 0 2-.9 2-2 0-1.4-1-1.8-1-3 0-1.1.9-2 2-2h2a5 5 0 0 0 5-5c0-4.9-4.5-8-10-8z"/></svg></div>
+        <h3>Two themes, one identity</h3>
+        <p>Follow your system light or dark setting — or lock into <strong>Walker</strong>, the neon-on-black look the app was designed around.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ SHOWCASE ============================ -->
+<section class="section section--tight">
+  <div class="wrap">
+
+    <div class="show reveal">
+      <div class="show__text">
+        <span class="eyebrow">The inbox</span>
+        <h2 class="h-lg">A chat list you can read at a glance</h2>
+        <p class="lead">Filter to <strong>All</strong>, <strong>Unread</strong> or <strong>Pinned</strong> in one tap. Unread threads glow, so the conversation that needs you is never buried under the ones that don't.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg> Unread counters on every thread</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg> Pin the people who matter to the top</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg> <strong>Saved messages</strong> — your own private notepad</li>
+        </ul>
+      </div>
+      <div class="show__media">
+        <div class="shot shot--pair"><img src="assets/chatlist-screen.png" alt="Chat list with All, Unread and Pinned filters" loading="lazy" width="1280" height="2856"></div>
+        <div class="shot shot--pair"><img src="assets/unread-messages.png" alt="Unread messages highlighted in the chat list" loading="lazy" width="1280" height="2856"></div>
+      </div>
+    </div>
+
+    <div class="show show--rev reveal">
+      <div class="show__text">
+        <span class="eyebrow">Conversation</span>
+        <h2 class="h-lg">Talk faster than you can type</h2>
+        <p class="lead">Record a voice note in a single gesture and it arrives as a clean, playable waveform. Pin an important line to the top of the thread so nobody has to scroll back for it.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg> Waveform playback with duration</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg> Pinned messages stay at the top</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg> Delivery and read ticks on every bubble</li>
+        </ul>
+      </div>
+      <div class="show__media">
+        <div class="shot shot--pair"><img src="assets/audio-message-feature.png" alt="Recording a voice message in PingMeBack" loading="lazy" width="1280" height="2856"></div>
+        <div class="shot shot--pair"><img src="assets/chat-message.png" alt="Conversation showing text bubbles and voice notes" loading="lazy" width="1280" height="2856"></div>
+      </div>
+    </div>
+
+    <div class="show reveal">
+      <div class="show__text">
+        <span class="eyebrow">Sharing</span>
+        <h2 class="h-lg">Send anything, from anywhere in the chat</h2>
+        <p class="lead">One button opens everything: your photo library, the camera, or any file up to 25 MB. No nested menus, no waiting for a picker to load.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg> Photo &amp; camera in one sheet</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg> Documents up to 25 MB</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg> Queued and retried if you lose signal</li>
+        </ul>
+      </div>
+      <div class="show__media">
+        <div class="shot"><img src="assets/attachment-features.png" alt="Attachment sheet with photo, camera and file options" loading="lazy" width="1280" height="2856"></div>
+      </div>
+    </div>
+
+    <div class="show show--rev reveal">
+      <div class="show__text">
+        <span class="eyebrow">Your account</span>
+        <h2 class="h-lg">Your profile, on your terms</h2>
+        <p class="lead">Claim a username, set a photo, and choose exactly what other people get to see. Everything sensitive — privacy, blocked contacts, active devices and deletion — lives in one settings screen.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg> Simple <strong>@username</strong> identity</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg> See and revoke signed-in devices</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg> Delete your account permanently, whenever you want</li>
+        </ul>
+      </div>
+      <div class="show__media">
+        <div class="shot shot--pair"><img src="assets/self-user-profile-screen.png" alt="PingMeBack settings screen with privacy, blocked and devices options" loading="lazy" width="1280" height="2856"></div>
+        <div class="shot shot--pair"><img src="assets/other-user-profile-screen.png" alt="Viewing another user's profile in PingMeBack" loading="lazy" width="1280" height="2856"></div>
+      </div>
+    </div>
+
+    <div class="show reveal">
+      <div class="show__text">
+        <span class="eyebrow">Appearance</span>
+        <h2 class="h-lg">Meet <span class="grad">Walker</span> — neon on black</h2>
+        <p class="lead">Walker ignores your system setting and stays dark, always. Cut-corner bubbles, a mint glow on everything you send, and true black that's kind to OLED screens and late-night eyes alike.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg> Or use <strong>Default</strong> and follow your system</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg> Live preview before you switch</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg> True-black background saves battery on OLED</li>
+        </ul>
+      </div>
+      <div class="show__media">
+        <div class="shot shot--pair"><img src="assets/theme-setting-screen.png" alt="Appearance settings with Default and Walker themes" loading="lazy" width="1280" height="2856"></div>
+        <div class="shot shot--pair"><img src="assets/splash-screen.png" alt="PingMeBack splash screen" loading="lazy" width="1280" height="2856"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================ GALLERY ============================ -->
+<section class="section section--tight" id="screens">
+  <div class="wrap center reveal" style="max-width:680px;margin-inline:auto;margin-bottom:40px">
+    <span class="eyebrow">Screens</span>
+    <h2 class="h-lg">Take the full tour</h2>
+    <p class="lead center">Every screen, straight from the build. Swipe through.</p>
+  </div>
+
+  <div class="gallery reveal">
+    <figure><div class="shot"><img src="assets/splash-screen.png" alt="Splash screen" loading="lazy" width="1280" height="2856"></div><figcaption>Splash</figcaption></figure>
+    <figure><div class="shot"><img src="assets/chatlist-screen.png" alt="Chat list" loading="lazy" width="1280" height="2856"></div><figcaption>Chat list</figcaption></figure>
+    <figure><div class="shot"><img src="assets/unread-messages.png" alt="Unread messages" loading="lazy" width="1280" height="2856"></div><figcaption>Unread filter</figcaption></figure>
+    <figure><div class="shot"><img src="assets/chat-message.png" alt="Conversation view" loading="lazy" width="1280" height="2856"></div><figcaption>Conversation</figcaption></figure>
+    <figure><div class="shot"><img src="assets/audio-message-feature.png" alt="Voice message recording" loading="lazy" width="1280" height="2856"></div><figcaption>Voice notes</figcaption></figure>
+    <figure><div class="shot"><img src="assets/attachment-features.png" alt="Attachment options" loading="lazy" width="1280" height="2856"></div><figcaption>Attachments</figcaption></figure>
+    <figure><div class="shot"><img src="assets/other-user-profile-screen.png" alt="Another user's profile" loading="lazy" width="1280" height="2856"></div><figcaption>Contact profile</figcaption></figure>
+    <figure><div class="shot"><img src="assets/self-user-profile-screen.png" alt="Settings and account screen" loading="lazy" width="1280" height="2856"></div><figcaption>Settings</figcaption></figure>
+    <figure><div class="shot"><img src="assets/theme-setting-screen.png" alt="Appearance settings" loading="lazy" width="1280" height="2856"></div><figcaption>Appearance</figcaption></figure>
+  </div>
+</section>
+
+<!-- ============================ EARLY ACCESS ============================ -->
+<section class="section" id="access">
+  <div class="wrap">
+    <div class="cta reveal">
+      <span class="eyebrow"><i class="dot"></i> Closed testing</span>
+      <h2 class="h-lg">Be one of the first on PingMeBack</h2>
+      <p class="lead center" style="margin-inline:auto">The app is in closed testing on Google Play. Send us the email address linked to your Play account and we'll add you to the tester list — you'll get the app, plus every update before anyone else.</p>
+
+      <div class="btn-row center" style="margin-top:2rem">
+        <a class="play-badge" href="https://docs.google.com/forms/d/e/1FAIpQLSddCtJkI2fU3N0K5g80t00EVzGH8-jRmo-6OUdHBBDJa1eNFg/viewform?usp=sharing&amp;ouid=109148587220267106349" target="_blank" rel="noopener" aria-label="Request early access on Google Play">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3.6 1.8C3.2 2.1 3 2.6 3 3.2v17.6c0 .6.2 1.1.6 1.4L13.4 12 3.6 1.8z" fill="#00C3FF"/>
+            <path d="M17.3 8.6 4.9 1.5c-.5-.3-1-.3-1.3-.1L13.4 12l3.9-3.4z" fill="#00E177"/>
+            <path d="M3.6 22.6c.3.2.8.2 1.3-.1l12.4-7.1L13.4 12 3.6 22.6z" fill="#FF3A44"/>
+            <path d="m17.3 8.6-3.9 3.4 3.9 3.4 3.1-1.8c1-.6 1-1.9 0-2.5l-3.1-1.5z" fill="#FFC900"/>
+          </svg>
+          <span class="pb-txt">
+            <span class="pb-top">Request access on</span>
+            <span class="pb-main">Google Play</span>
+          </span>
+        </a>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <span class="step__n">1</span>
+          <h3>Fill the request form</h3>
+          <p>Takes under a minute. We only need the Google account email you use on the Play Store.</p>
+        </div>
+        <div class="step">
+          <span class="step__n">2</span>
+          <h3>Get added as a tester</h3>
+          <p>Once your address is on the list, Google Play unlocks the closed-testing build for you.</p>
+        </div>
+        <div class="step">
+          <span class="step__n">3</span>
+          <h3>Install and start pinging</h3>
+          <p>Download from Play like any other app, claim your username, and you're in.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section class="section section--tight" id="faq">
+  <div class="wrap">
+    <div class="center reveal" style="max-width:640px;margin-inline:auto;margin-bottom:40px">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="h-lg">Questions, answered</h2>
+    </div>
+
+    <div class="faq reveal">
+      <details open>
+        <summary>Is PingMeBack free?</summary>
+        <p>Yes. The app is completely free during the testing programme, and there are no ads anywhere in it.</p>
+      </details>
+      <details>
+        <summary>Which devices are supported?</summary>
+        <p>PingMeBack is an Android app and runs on Android 8.0 (Oreo) and above. An iOS version isn't available yet.</p>
+      </details>
+      <details>
+        <summary>Why do I need to fill a form to download it?</summary>
+        <p>The app is in <strong>closed testing</strong> on Google Play, which means only email addresses on the tester list can see and install it. The form is how you get on that list — once you're added, you install it from the Play Store exactly like any other app.</p>
+      </details>
+      <details>
+        <summary>How long does approval take?</summary>
+        <p>We add testers in batches. Most requests are processed within a couple of days; you'll be able to install as soon as your Google account is on the list.</p>
+      </details>
+      <details>
+        <summary>What happens to my messages and media?</summary>
+        <p>They're encrypted in transit over HTTPS, and the copy on your phone sits in an encrypted database keyed to your device's hardware-backed keystore. Messages are <strong>not</strong> end-to-end encrypted — they're readable on the server. There's no advertising or analytics profiling, and we never sell your data. Full detail is in our <a href="privacy.html">Privacy Policy</a>.</p>
+      </details>
+      <details>
+        <summary>How do I delete my account?</summary>
+        <p>Open <strong>Settings → Delete account</strong> in the app, enter your password and confirm — it's immediate. If you no longer have the app installed, submit a request on our <a href="delete-account.html">account deletion page</a>. Either way it's permanent and removes your profile along with everything in it.</p>
+      </details>
+      <details>
+        <summary>How do I report a bug or send feedback?</summary>
+        <p>Testers are exactly who we want to hear from. Email <a href="mailto:support@pingmeback.sbs">support@pingmeback.sbs</a> with what you saw and what you expected, and we'll follow up.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:1rem">
+          <img src="assets/logo.png" alt="PingMeBack logo">
+          <span>PingMeBack</span>
+        </a>
+        <p>A fast, minimal messenger for Android — voice notes, media sharing and a neon-on-black interface, with none of the noise.</p>
+      </div>
+
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#screens">Screens</a></li>
+          <li><a href="#access">Early access</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Legal &amp; support</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="delete-account.html">Delete your account</a></li>
+          <li><a href="mailto:support@pingmeback.sbs">support@pingmeback.sbs</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© <span id="yr">2026</span> PingMeBack. All rights reserved.</span>
+      <span>Google Play and the Google Play logo are trademarks of Google LLC.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // mobile nav
+  var t = document.getElementById('navToggle'), l = document.getElementById('navLinks');
+  t.addEventListener('click', function () {
+    var open = l.classList.toggle('open');
+    t.setAttribute('aria-expanded', open);
+  });
+  l.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') { l.classList.remove('open'); t.setAttribute('aria-expanded', false); }
+  });
+
+  // reveal on scroll
+  var els = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: .12, rootMargin: '0px 0px -60px 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  } else {
+    els.forEach(function (el) { el.classList.add('in'); });
+  }
+</script>
+</body>
+</html>
