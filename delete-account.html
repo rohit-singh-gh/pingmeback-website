@@ -83,29 +83,31 @@
       <p class="lead center">We'll only reply if we need more information to identify the account.</p>
     </div>
 
-    <div class="embed">
-      <div class="embed__bar">
-        <span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          Secure form, hosted on Google Forms
-        </span>
-        <a class="btn btn--ghost btn--sm" href="https://forms.gle/1EjbW9k96tncu4DJ7" target="_blank" rel="noopener">Open in a new tab ↗</a>
+    <div class="form-panel">
+      <div class="form-panel__bar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <span>Sent over an encrypted connection</span>
       </div>
-      <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSfbiu-aOuBUund2NU43a9QBsDhfrZYjjulZ-0FoLhD-ruQPDw/viewform?embedded=true"
-        title="PingMeBack account deletion request form"
-        loading="lazy">
-        Loading the deletion request form…
-      </iframe>
+
+      <form id="delForm">
+        <div class="field">
+          <label for="email">Email address on the account</label>
+          <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+        </div>
+
+        <div class="field">
+          <label for="note">Anything that helps us find it <span class="hint">Optional — your @username, for example.</span></label>
+          <textarea id="note" name="note" placeholder="Your @username, for example."></textarea>
+        </div>
+
+        <button id="delSubmit" class="btn btn--primary" type="submit">Request deletion</button>
+        <p id="delMsg" class="form__msg" style="display:none" role="status" aria-live="polite"></p>
+      </form>
     </div>
 
-    <div class="callout" style="max-width:800px;margin:1.6rem auto 0">
-      <p><strong>After you submit:</strong> Request received. If that address has an account, it will be deleted within 30 days. You'll only hear from us if we need more information.</p>
-    </div>
-
-    <p class="muted center" style="margin-top:1.2rem;font-size:.9rem">
-      Form not loading? <a href="https://forms.gle/1EjbW9k96tncu4DJ7" target="_blank" rel="noopener">Open it directly here</a>,
-      or email <a href="mailto:support@pingmeback.sbs">support@pingmeback.sbs</a>.
+    <p class="form-note center" style="max-width:620px;margin-inline:auto">
+      We'll only reply if we need more information to identify the account.
+      Trouble submitting? Email <a href="mailto:support@pingmeback.sbs">support@pingmeback.sbs</a>.
     </p>
   </div>
 </section>
@@ -178,6 +180,46 @@
   document.getElementById('yr').textContent = new Date().getFullYear();
   var t = document.getElementById('navToggle'), l = document.getElementById('navLinks');
   t.addEventListener('click', function () { t.setAttribute('aria-expanded', l.classList.toggle('open')); });
+</script>
+
+<script>
+const EP = "https://tobmcnigrzloggmpltdr.supabase.co/functions/v1/request-deletion";
+const KEY = "sb_publishable_0J0T5la4spd7v8FSZHre9A_xPgj--4y";
+const f = document.getElementById("delForm"),
+      b = document.getElementById("delSubmit"),
+      m = document.getElementById("delMsg");
+
+function show(text, kind) {
+  m.textContent = text;
+  m.className = "form__msg " + kind;
+  m.style.display = "block";
+}
+
+f.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  b.disabled = true; b.textContent = "Sending…";
+  try {
+    const r = await fetch(EP, {
+      method: "POST",
+      headers: { "content-type": "application/json", apikey: KEY },
+      body: JSON.stringify({
+        email: document.getElementById("email").value.trim(),
+        note: document.getElementById("note").value.trim(),
+      }),
+    });
+    const body = await r.json().catch(() => ({}));
+    if (r.ok) {
+      f.querySelectorAll("input,textarea").forEach(x => { x.value = ""; x.disabled = true; });
+      show("Request received. If that address has an account, it will be deleted within 30 days. You'll only hear from us if we need more information.", "ok");
+      b.textContent = "Request sent";
+      return;
+    }
+    show(body.message || "Something went wrong. Please try again.", "err");
+  } catch {
+    show("Could not reach the server. Check your connection and try again.", "err");
+  }
+  b.disabled = false; b.textContent = "Request deletion";
+});
 </script>
 </body>
 </html>
